@@ -1,5 +1,3 @@
-
-
 import { HtmlDocument, hydrateClient } from "@bnk/react-server";
 
 const AppEntry = () => {

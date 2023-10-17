@@ -2,18 +2,7 @@ import { reactServer } from "@bnk/react-server";
 import Bun from "bun";
 import { App } from "./app";
 
-// await createBuild();
-
-export const createBuild = async (
-  {
-    entryPoint = "./app.tsx",
-  }: {
-    entryPoint: string;
-  } = {
-    entryPoint: "./app.tsx",
-  }
-) => {
-  console.log("building", entryPoint);
+export const createBuild = async (entryPoint: string = "./src/entry.tsx") => {
   const builds = await Bun.build({
     entrypoints: [entryPoint],
     target: "browser",
@@ -24,15 +13,15 @@ export const createBuild = async (
     },
     outdir: "./build",
   });
-  console.log(builds);
+
   return builds;
 };
 
+await createBuild();
 
-await createBuild()
 reactServer({
   Entry: <App />,
   serve: Bun.serve,
   buildPath: "./build/app.js",
-  fileBuildName: "app.js",  
+  fileBuildName: "app.js",
 });
