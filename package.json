@@ -1,0 +1,19 @@
+{
+  "name": "bnk-payments-stack",
+  "module": "entry.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@bnk/core": "^0.1.7",
+    "@bnk/react-server": "0.1.5-alpha.9oaik5tz",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
