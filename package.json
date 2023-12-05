@@ -2,17 +2,21 @@
   "name": "bnk-payments-stack",
   "module": "entry.ts",
   "type": "module",
+  "scripts": {
+    "dev": "bun run --hot entry.tsx"
+  },
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "bun-types": "latest"
+    "bun-types": "^1.0.15"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@bnk/core": "^0.1.8",
-    "@bnk/react-server": "0.1.6",
+    "@bnk/react-server": "latest",
+    "bnkit": "0.5.13",
+    "bun": "^1.0.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
